@@ -1,120 +1,131 @@
 # Data Analysis
 
-- Repository: `immo-eliza-analysis`
-- Type: `Consolidation`
-- Duration: `3 days`
-- Deadline: `xx/xx/202x 5:00 PM`
-- Team: solo or team
+- Repository: `challenge-data-analysis`
+- Type of Challenge: `Consolidation`
+- Duration: `4 days`
+- Deadline: `25/04/2025 13:30`
+- Team challenge : 4
 
-## Mission Objectives
+## Mission objectives
 
-- Be able to use `pandas`
-- Be able to use a data visualization library of your choice (such as `matplotlib` or `seaborn`)
-- Be able to clean a dataset for analysis
-- Be able to use colors in visualizations correctly
-- Be able to establish conclusions about a dataset
-- Be able to find and answer creative questions about data
-- Be able to present your insights to a non-technical audience
+- Be able to use `pandas`.
+- Be able to use Data visualization libraries.(`matplotlib`,`seaborn`, plotly,...).
+- Be able to clean a dataset for analysis.
+- Be able to establish conclusions about a dataset.
+- Be able to find and answer creative questions about data.
+- Be able to think outside the box.
 
 ## The Mission
 
-The real estate company Immo Eliza wants to establish itself as the biggest Belgian real estate services provider. To achieve that goal, they need to more accurately and faster than their competitors estimate the value of properties, to pick out those properties that are most valuable to them and their clients.
+The real estate company "ImmoEliza" wants to establish itself as the biggest one in all of Belgium. To pursue this goal, it needs to create a machine learning model to predict prices on Belgium's sales. That way, they can pick out the properties that are the most valuable to them.
 
-Enter creating a machine learning model to predict the prices of properties across Belgium. Having no in-house data scientists, they are looking for talented people to do it for them. Since your last encounter with them went great, they continue to rely on you to do the job. Everything is in your hands now!
+But for this, it needs to do a preliminary analysis to gather some information. Having no in-house data scientist, they are looking for talented people to do it for them.
 
-By the end of this week, Immo Eliza's management wants to see a preliminary analysis based on the dataset you previously scraped. The management has no technical background. Broadly speaking, they have two main questions: 
-- What are currently the most interesting insights about the Belgian real estate market?
-- What variables are the most important when determining the price of a property?
+Since your last encounter with them went great, they reached out to you to do this job. Everything is in your hands now!
 
-## Steps
+Take the dataset previously scraped to do the analysis. _(If you were in different groups, decide together which dataset you are going to use.)_
 
-### Step 1: Data Cleaning
+![Analysis (Image)](https://y26uq11r8xr1zyp0d3inciqv-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/37.jpg)
 
-You have collected your data, time to further clean it.
+### Must-have features
 
-A cleaned dataset is a dataset that doesn't contain any duplicates, has no blank spaces, and has no other obvious errors. The rest of the analysis is worthless if you neglect this step; Garbage In, Garbage Out.
+##### Step 1 : Data Cleaning
 
-Take care of the following:
+We have decided to use the Kangaroo dataset. So it's time to do a cleaning on it. A cleaned dataset is a dataset that doesn't contain any duplicates, is blank spaces or error-free. The rest of the analysis can be discarded if you neglect this step!
+
 - No duplicates
-- No blank spaces (e.g. `" I love python "` => `"I love python"`)
-- No empty values (set them to `None` or `NaN`)
-- No wrongly encoded values (e.g. a text value in the price column)
+- No blank spaces (ex: `" I love python "` => `"I love python"`)
+- No errors
+- No empty values, delete them or [impute](https://machinelearningmastery.com/statistical-imputation-for-missing-values-in-machine-learning/) them
 
-### Step 2: Data Analysis
+##### Step 2 : Data Analysis
 
-Now that the data has been both collected and cleaned, let's move on to the analysis.
+Now that the data has been collected and cleaned, it is time for the analysis. How many variables and inputs do you have? And so on...
 
-You **must** be able to answer following questions (with a vizualization if appropriate):
-- How many observations and features do you have?
-- What is the proportion of missing values per column?
-- Which variables would you delete and why?
-- What variables are most subject to outliers?
-- How many qualitative and quantitative variables are there? How would you transform the qualitative values into numerical values?
-- What is the correlation between the variables and the price? Why do you think some variables are more correlated than others?
-- How are the variables themselves correlated to each other? Can you find groups of variables that are correlated together?
-- How are the number of properties distributed according to their surface?
-- Which five variables do you consider the most important and why?
-- What are the least/most expensive municipalities in Belgium/Wallonia/Flanders? (_in terms of price per m², average price, and median price_)
+Use the tools such as `matplotlib`/`seaborn`/`plotly`!
 
-This is a non-exhaustive list of possible questions. Try to make a maximum number of interpretations from the dataset. **Bonus points for creative and out-of-the-box insights.**
+Answer the following questions with a vizualization if appropriate:
 
-Use tools such as `matplotlib`, `seaborn`, `plotly`, or [insert whatever visualization tool you find useful]...
+- How many rows and columns?
+- What is the correlation between the variables and the price? (Why might that be?)
+- How are variables correlated to each other? (Why?)
+- Which variables have the greatest influence on the price?
+- Which variables have the least influence on the price?
+- How many qualitative and quantitative variables are there? How would you transform these values into numerical values?
+- Percentage of missing values per column?
 
-> Do your analysis in notebooks. No real need for scripting in this case, you'll want to have your hands free to experiment and explore the data in many directions. Writing functions for code you reuse is still a good idea, don't lose track of your good habits. Don't make it too messy though, your results should be reproducible and Immo Eliza's CEO might ask to rerun an analysis with a slight change :-)
+##### Step 3 : Data Interpretation
 
-### Step 3: Presentation
+After analyzing your data, it's finally time to interpret your results. You have to communicate your analysis using simple words and a table or graph, then use the results to decide on your best course of action.
 
-After analyzing your data, you're finally ready to present your results. You have to communicate your analysis using simple words and clear graphs, and ideally also deliver a few recommendations.
+Example of questions you should be able to answer to:
 
-You can make your **plots** presentation-ready by accounting for the following points:
-- A clear title
-- A legend (if applicable)
-- Add axis labels (in understandable language, no variable names)
-- Add axis units
-- Have comparable scales
-- Have no overlapping text
-- A main takeaway
-- Remove all clutter that doesn't contribute to the message
-- Smart use of [colors](https://chartio.com/learn/charts/how-to-choose-colors-data-visualization/)
+\*NB: This is a non-exhaustive list. Try to make a maximum of interpretations of the dataset.
+**Bonus points from yours truly for creative and outside the box questions that you answer.\***
 
-> Don't mention data cleaning in your presentation as this is a technical background task. You should focus on the insights you found and the recommendations you can make.
+You **must** be able to answer :
 
-## Repository
+- Plot the outliers.
+- Which variables would you delete and why ?
+- Represent the number of properties according to their surface using a histogram.
+- In your opinion, which 5 variables are the most important and why?
+- What are the **most** expensive municipalities in Belgium? (Average price, median price, price per square meter)
+- What are the **most** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+- What are the **most** expensive municipalities in Flanders? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Belgium? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Flanders? (Average price, median price, price per square meter)
 
-Continue with your scraping repository but change its name by removing the `-scraping-` part.
-
-Establish the following:
-- In your `data/` folder
-   - Have a `raw/` folder with the original dataset
-   - Have a `cleaned/` folder with the cleaned dataset
-- Make a `clean.py` script for any additional cleaning
-- Rename your previous script from `main.py` to `scrape.py`
-- Add your notebooks in an `analysis/` folder
-- Put your finalized presentation in `.pdf` format in a `reports/` folder
-- Let your README reflect the additions you made
-
-In general, **think modular**! You do not want to run all steps at once, so your code should be tailored to that gradual process: scrape, clean, analyze, model, deploy, ...
 
 ## Deliverables
 
-As main deliverable, we expect a compelling presentation of **15 minutes + 5 minutes Q&A** that conveys your data analysis including at least five well-crafted visualizations.
+As a deliverable, we expected a compelling presentation that tells a story from the data. It could be in notebook format or any form of presentation.
 
-Next to that, your repository should be updated.
+Your code should be clean, structured and documented as always.
+
+1. Pimp up the README file:
+   - Description
+   - Installation
+   - Usage
+   - (Visuals)
+   - (Contributors)
+   - (Timeline)
+   - (Personal situation)
+2. Have a clean presentation
+3. Have a clean dataset
+4. **Bonus**, Have a look at the [Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) object in scikit learn and try to replicate your Step 1 transformations cleanly.
+
+### Steps
+
+1. Create the repository
+2. Study the request (What & Why ?)
+3. Identify technical challenges (How ?)
+
+## Plots must-have
+- Title
+- Legend
+- Axis labels (do not forget units)
+- Correct usage of colors
+- Comparable scales
+- No overlapping text
+- No screenshots
 
 ## Evaluation criteria
 
-| Criterion          | Indicator                                                 | Yes/No |
-| ------------------ | --------------------------------------------------------- | ------ |
-| 1. Is complete     | Know how to answer all the above questions                |        |
-|                    | Good use of `pandas` and a visualization library          |        |
-|                    | Deliver a convincing presentation                         |        |
-|                    | Clean notebook(s)                                         |        |
-|                    | An updated repository                                     |        |
-| 2. Is great        | Creative questions were answered                          |        |
-|                    | The colors are chosen carefully                           |        |
+| Criteria       | Indicator                                                                                                     | Yes/No |
+| -------------- | ------------------------------------------------------------------------------------------------------------- | ------ |
+| 1. Is complete | Know how to answer all the above questions.                                                                   |        |
+|                | Use `pandas` and `matplotlib`/`seaborn`                                                                       |        |
+|                | Nice presentation on the subject                                                                              |        |
+|                | Code is clean and structured                                                                                  |        |
+|                | README is complete and nicely formatted                                                                       |        |
+| 2. Is great    | Additional questions were answered.                                                                           |        |
+|                | Bonus was answered.                                                                                           |        |
+|                | The [colors are chosen carefully.](https://chartio.com/learn/charts/how-to-choose-colors-data-visualization/) |        |
 
 ## Quotes
 
-_"The lottery is a tax on people who don't understand statistics." - Anonymous_
+“The lottery is a tax on people who don't understand the statistics.”
+_- Anonymous_
 
 ![You've got this!](https://media.giphy.com/media/JrXas5ecb4FkwbFpIE/giphy.gif)
