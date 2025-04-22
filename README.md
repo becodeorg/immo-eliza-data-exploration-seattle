@@ -9,7 +9,7 @@
 ## Mission objectives
 
 - Be able to use `pandas`.
-- Be able to use Data visualization libraries.(`matplotlib`,`seaborn`, plotly,...).
+- Be able to use Data visualization libraries.(`matplotlib`,`seaborn`, `plotly`,...).
 - Be able to clean a dataset for analysis.
 - Be able to establish conclusions about a dataset.
 - Be able to find and answer creative questions about data.
